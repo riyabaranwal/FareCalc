@@ -25,7 +25,7 @@ try:
     # User Inputs
     km = float(input("Enter distance (in km): "))
     vehicletype = input("Enter vehicle type (Economy / Premium / SUV): ") 
-    hour = int(input("Enter hour of travel (0-23): "))
+    hour = float(input("Enter hour of travel (0-23): "))
 
     fare = calculate_fare(km, vehicletype, hour)
 
