@@ -22,7 +22,6 @@ def calculate_fare(km, vehicletype, hour):
 
 
 try:
-    # User Inputs
     km = float(input("Enter distance (in km): "))
     vehicletype = input("Enter vehicle type (Economy / Premium / SUV): ") 
     hour = float(input("Enter hour of travel (0-23): "))
@@ -33,16 +32,16 @@ try:
         print("\n Service Not Available for selected vehicle type.")
     else:
         print("\n--- Ride Estimate Receipt ---")
-        print(f"Distance Travelled : {km} km")
-        print(f"Vehicle Type       : {vehicletype}")
-        print(f"Base Rate (/km)    : ₹{rates[vehicletype]}")
+        print("Distance Travelled : {km} km")
+        print("Vehicle Type       : {vehicletype}")
+        print("Base Rate (/km)    : ₹{rates[vehicletype]}")
         
         if 17 <= hour <= 20:
             print("Surge Applied      : Yes (1.5x)")
         else:
             print("Surge Applied      : No")
         
-        print(f"Total Fare         : ₹{fare:.2f}")
+        print(f"Total Fare         : ₹{fare}")
         print("-------------------------")
 
 except ValueError:
